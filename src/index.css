@@ -1,0 +1,123 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 50% 98%;
+    --foreground: 210 40% 15%;
+
+    --card: 213 50% 99%;
+    --card-foreground: 210 40% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 40% 15%;
+
+    --primary: 210 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 217 54% 95%;
+    --secondary-foreground: 210 40% 20%;
+
+    --muted: 213 40% 95%;
+    --muted-foreground: 215 25% 40%;
+
+    --accent: 194 85% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 224 100% 70%;
+
+    --radius: 1rem;
+  }
+
+  * {
+    @apply border-border;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-sm;
+  }
+  
+  .glass-card {
+    @apply bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl shadow-sm;
+  }
+  
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-24;
+  }
+  
+  .button-transition {
+    @apply transition-all duration-300 ease-in-out transform hover:translate-y-[-2px];
+  }
+  
+  .link-hover {
+    @apply relative after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all after:duration-300 hover:after:w-full;
+  }
+  
+  .snowflake {
+    --size: 10px;
+    width: var(--size);
+    height: var(--size);
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    animation: snowfall linear infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+    z-index: -1;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      background-position: -468px 0;
+    }
+    100% {
+      background-position: 468px 0;
+    }
+  }
+  
+  .shimmer {
+    background: linear-gradient(to right, #f6f7f8 8%, #edeef1 18%, #f6f7f8 33%);
+    background-size: 800px 104px;
+    animation: shimmer 1.5s infinite linear;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes snowfall {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    25% {
+      transform: translateY(25vh) translateX(15px);
+    }
+    50% {
+      transform: translateY(50vh) translateX(-15px);
+    }
+    75% {
+      transform: translateY(75vh) translateX(15px);
+    }
+    100% {
+      transform: translateY(100vh) translateX(-15px) rotate(360deg);
+    }
+  }
+}
