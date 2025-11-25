@@ -3,11 +3,6 @@
 *Predict Your Snow Day Chances with Advanced Weather Intelligence*
 
 <div align="center">
-
-![last-commit](https://img.shields.io/github/last-commit/vivek/snow-day-calculator?style=flat\&logo=git\&logoColor=white\&color=0080ff)
-![repo-top-language](https://img.shields.io/github/languages/top/vivek/snow-day-calculator?style=flat\&color=0080ff)
-![repo-language-count](https://img.shields.io/github/languages/count/vivek/snow-day-calculator?style=flat\&color=0080ff)
-
 **Built with:**
 
 ![JSON](https://img.shields.io/badge/JSON-000000.svg?style=flat\&logo=JSON\&logoColor=white)
